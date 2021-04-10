@@ -1,0 +1,26 @@
+version 1.0
+
+created a monkeyscript that autoclicks the youtube 'are you still watching' nag
+
+version 1.1
+
+performance update and bug fixes. no longer runs the script on multiple websites.
+
+version 1.2
+
+ported the monkeyscript to a firefox addon with statistics and toolbar integration.
+
+version 1.2.1
+
+Bug fix:
+	fixed a bug causing the autoplay counter to continuously count after closing the first popup in
+	adfree enviroments and continuous counting in ad enviroments
+
+todo:
+
+DONE - by popular demand this will also be ported to chrome. support is expected to be good as the mozilla api is 
+based on the chromium api.
+
+Possible updates
+
+include support for other websites with nags such as netflix
