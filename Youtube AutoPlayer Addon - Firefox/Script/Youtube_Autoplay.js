@@ -33,7 +33,7 @@ var everythingLoaded = setInterval(function() { //checks the dom if everything i
             //setTimeout(repeat, time);
     }
   }
-}, 1000);
+}, delay * 0.67);
 function Checker() {
 	if (ran != true){
 		ran = true;
@@ -43,8 +43,11 @@ function Checker() {
     var elem = arr[1]; // the popup
     if(elem != null | undefined) {
         document.getElementById('text').click();
-		console.log("popup clicked");
-		//elem.click(); 
+		/*youtube uses an element generator. The for each loop is needed
+		to remove the generator which is what the arr array is. BUG FIXED*/
+		arr.forEach((arrvalue, index) => {
+			arrvalue.parentNode.removeChild(arr[index]);
+		});
 		autoplays += 1;
 		setCookie("YouTube_AutoPlayer", autoplays, 999);
 		elem = undefined; // unset
