@@ -1,31 +1,29 @@
 {
-
   "manifest_version": 2,
   "name": "Youtube Autoplayer",
-  "version": "1.2",
-
+  "version": "1.2.1",
   "description": "Removes the prompt asking if you are still watching.",
-
   "icons": {
     "48": "Icon/Addon_Icon.png"
   },
-  
   "permissions": [
-      "tabs",
-      "cookies",
-      "<all_urls>"
+    "tabs",
+    "cookies",
+    "<all_urls>"
   ],
-
   "browser_action": {
     "default_icon": "Icon/Addon_Icon.png",
     "default_title": "Youtube_Autoplay",
     "default_popup": "Popup/Index.html"
   },
-  
-    "content_scripts": [
+  "content_scripts": [
     {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["Script/Youtube_Autoplay.js"]
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "Script/Youtube_Autoplay.js"
+      ]
     }
   ]
 }
