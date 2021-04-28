@@ -20,3 +20,22 @@ function cookieUpdate() {
     });
 }
 setInterval(cookieUpdate, 500);
+
+let Reset_Count = document.getElementById('Reset');
+Reset_Count.onclick = function(){
+	if (confirm("Warning: this will reset the count to 0.This is irreversible. \n			Are you sure?")){
+		let value = "0";
+		let SettingCookies = browser.cookies.set({
+			url: "https://www.youtube.com/",
+			name: "YouTube_AutoPlayer",
+			value: value
+		});
+	}
+};
+
+browser.cookies.onChanged.addListener(function(changeInfo) {
+  console.log('Cookie changed: ' +
+              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
+              '\n * Cause: ' + changeInfo.cause +
+              '\n * Removed: ' + changeInfo.removed);
+});
