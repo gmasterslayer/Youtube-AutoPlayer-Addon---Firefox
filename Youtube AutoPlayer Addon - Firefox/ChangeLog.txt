@@ -17,12 +17,14 @@ Bug fix:
 	adfree enviroments and continuous counting in ad enviroments
 
 version 1.3
-	Bug Fix - youtube will sometimes reload the page resulting in a paused video. 
-
-version 1.4
 	Now checks if the video element has been reloaded. This is done by checking if the script is
 	running for the first time and a paused video is detected. This feature will prevent the page from from randomly
 	pausing the video outside of the nags and page reloads. 
+
+version 1.3.1
+	Bug Fix - autoplay counter couting every page reload instead of just reloads for videos. 
+	Bug Fix - Updated manifest as well since I forgot in version 1.3.
+
 todo:
 
 DONE - by popular demand this will also be ported to chrome. support is expected to be good as the mozilla api is 

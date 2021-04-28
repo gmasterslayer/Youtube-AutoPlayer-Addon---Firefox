@@ -26,9 +26,10 @@ var everythingLoaded = setInterval(function() { //checks the dom if everything i
 	//could be depricated with the use of the manifest
 	if (/loaded|complete/.test(document.readyState)) {
 		clearInterval(everythingLoaded);
-		var title = document.getElementsByTagName("TITLE")[0];
+		let title = document.getElementsByTagName("TITLE")[0];
+		let url = window.location.href;
 		title = title.innerHTML;
-		if (title.search("YouTube") != -1) {
+		if (title.search("YouTube") != -1 && url.search("watch") > -1) {
 			var CheckerTimer = setInterval(Checker, delay);
 			//setTimeout(repeat, time);
 		}
